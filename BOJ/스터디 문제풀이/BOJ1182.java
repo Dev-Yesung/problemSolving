@@ -35,5 +35,6 @@ public class BOJ1182 {
 
     backTracking(v + 1, sum + arr[v]);
     backTracking(v + 1, sum);
+    
   }
 }

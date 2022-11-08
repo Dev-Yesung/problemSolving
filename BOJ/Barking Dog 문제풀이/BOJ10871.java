@@ -18,6 +18,6 @@ public class BOJ10871 {
 		bw.write("\n");
 		bw.flush();
 		bw.close();
-        
+
 	}
 }
