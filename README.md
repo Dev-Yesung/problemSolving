@@ -3,7 +3,7 @@
 - 문제풀이 사이트 목록<br>
 1) BaekJoon Online Judge(백준온라인저지 : https://acmicpc.net)<br>
 2) Programmers(프로그래머스 : https://programmers.co.kr)<br>
-3) 알고리즘 문제해결 전략(종만북 : https://www.algospot.com)<br>
+3) 알고리즘 문제해결 전략(알고스팟 : https://www.algospot.com)<br>
 - 업로드 목적<br>
 1) 알고리즘 문제풀이코드 기록<br>
 2) 맞은문제와 틀린문제 문서로 분류(오답노트)<br>
