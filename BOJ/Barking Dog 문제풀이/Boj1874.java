@@ -34,7 +34,7 @@ public class Boj1874 {
         if (stack.isEmpty()) {
             System.out.println(sb.toString());
         } else {
-            System.out.println("No");
+            System.out.println("NO");
         }
     }
 }
