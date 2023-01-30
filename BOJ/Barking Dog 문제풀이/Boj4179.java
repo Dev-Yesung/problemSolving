@@ -91,7 +91,7 @@ public class Boj4179 {
                 if (jDist[nx][ny] >= 0 || board[nx][ny] == '#') {
                     continue;
                 }
-                if (fDist[nx][ny] != -1 && fDist[nx][ny] <= jDist[nx][ny] + 1) {
+                if (fDist[nx][ny] != -1 && fDist[nx][ny] <= jDist[cur.X][cur.Y] + 1) {
                     continue;
                 }
 
