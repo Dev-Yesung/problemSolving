@@ -1,7 +1,9 @@
 package ps;
 
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -32,6 +34,7 @@ public class ArrEx2 {
                 break;
             }
         }
+
 
         System.out.println(result);
     }
