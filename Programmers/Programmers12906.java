@@ -1,5 +1,3 @@
-package ps;
-
 import java.util.*;
 
 public class Programmers12906 {
