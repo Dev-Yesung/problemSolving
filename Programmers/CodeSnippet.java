@@ -1,7 +1,11 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// 참고링크 : https://rookie-developer.tistory.com/m/338
+// 참고링크
+// : https://rookie-developer.tistory.com/m/338
+// : https://velog.io/@suk13574
+// 참고 링크에서 잘못된 내용은 수정했음
 // 코딩테스트에 자주 나오는 알고리즘 기본 코드 구조 정리
 // 일단 외워 놓으면 반은 먹고 들어간다...!
 public class CodeSnippet {
@@ -453,7 +457,120 @@ public class CodeSnippet {
 		}
 	}
 
+	// 유니온 파인드 : 집합에 속한 대표자를 찾는 방법 -> 사이클 체크 때 사용
+	private static final int[] parent = new int[N + 1];
 
+	// 유일한 멤버 x를 포함하는 새 집합 생성
+	void makeSet(int x) {
+		parent[x] = x;
+	}
+
+	// x를 포함하는 집합 찾기
+	int findSet(int x) {
+		if (x == parent[x]) {
+			return x;
+		}
+
+		return findSet(parent[x]);
+	}
+
+	// x와 y를 포함하는 두 집합을 합집합 시키는 연산
+	void union(int x, int y) {
+		int xRoot = findSet(x);
+		int yRoot = findSet(y);
+		if (xRoot == yRoot) {
+			return;
+		}
+		parent[yRoot] = xRoot;
+	}
+
+	// 크루스칼 알고리즘 -> 간선 중심 채택
+	// 간선을 가중치 기준 오름차순으로 정렬
+	// -> 가중치 낮은 간선부터 채택
+	// -> 사이클 생기지 않게 하면서 최대 n-1개까지 간선 채택
+
+	// N이 정점의 개수, M이 간선의 개수일 때
+	int[] kruskalParent = new int[N];
+	// 간선 배열 -> Edge 는 left, right, weight로 구성됨
+	// left, right 는 정점 번호를 의미
+	Edge[] edges = new Edge[M];
+
+	// 유니온 파인드를 이용해야 한다.
+	void kruskal() {
+		for (int i = 0; i < N; i++) {
+			makeSet(i);
+		}
+
+		// 오름차순 정렬
+		Arrays.sort(edges, (o1, o2) -> o1.weight - o2.weight);
+		for (int i = 0; i < M; i++) {
+			Edge edge = edges[i];
+			if (findSet(edge.left) != findSet(edge.right)) {
+				union(edge.left, edge.right);
+			}
+		}
+	}
+
+	// 프림 알고리즘
+	// 정점 중심 채택 <-> 크루스칼은 간선 중심
+	// 임의의 정점에서 시작
+	// -> 인접 정점으로 가는 간선 중 최소 비용 간선으로 연결된 정점 채택
+	// -> 사이클 생기지 읺게 유의하면서 union
+	// N이 정점의 개수
+	// 인접행렬은 N X N
+	int prim(int start) {
+		// 정점 방문여부 체크
+		boolean[] visited = new boolean[N];
+		// 트리에 포함된 다른 정점에서 자신으로의 간선 비용중 최소비용
+		int[] minEdge = new int[N];
+
+		// MST 비용
+		int result = 0;
+		minEdge[start] = 0;
+		for (int i = 0; i < N; i++) {
+			int min = Integer.MAX_VALUE;
+			int minVertex = 0;
+
+			// 트리에 포함되지 않은 정점 중 가장 유리한 비용의 정점 찾기
+			for (int j = 0; j < N; j++) {
+				if (!visited[j] && min > minEdge[j]) {
+					min = minEdge[j];
+					minVertex = j;
+				}
+			}
+
+			visited[minVertex] = true;
+			result += min;
+
+			for (int j = 0; j < N; j++) {
+				if (!visited[j] && matrix[minVertex][j] != 0 && minEdge[j] > matrix[minVertex][j]) {
+					minEdge[j] = matrix[minVertex][j];
+				}
+			}
+		}
+
+		return result;
+	}
+
+
+	// 다익스트라
+	// 시작 정점에서 다른 정점으로 최단 경로를 구하는 알고리즘
+
+	// 플로이드 워샬
+	// 모든 쌍 최단 경로 알고리즘
+
+
+	static class Edge {
+		public int left;
+		public int right;
+		public int weight;
+
+		public Edge(int left, int right, int weight) {
+			this.left = left;
+			this.right = right;
+			this.weight = weight;
+		}
+	}
 
 	static class Vertex {
 
