@@ -548,7 +548,7 @@ public class CodeSnippet {
 				}
 			}
 		}
-
+		"avc".toLowerCase();
 		return result;
 	}
 
