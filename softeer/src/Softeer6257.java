@@ -45,6 +45,8 @@ public class Softeer6257 {
 		long count = 0;
 		for (int i = 0; i < n - 2; i++) {
 			for (int j = i + 1; j < n - 1; j++) {
+				// i보다 값이 작으면서 j보다 값이 작은 배열의 오른쪽 수들의 개수
+				// 여기서 조건 반드시 체크해야 함
 				if (bus[i] < bus[j]) {
 					count += mat[bus[i]][j];
 				}
