@@ -1,6 +1,8 @@
 import java.util.*;
 
-public class Programmers_kakao_81301 {
+// https://school.programmers.co.kr/learn/courses/30/lessons/81301
+// 숫자 문자열과 영단어
+public class ProgrammersKakao81301_1 {
 
 	public int solution(String s) {
 		List<String> list = initialize();

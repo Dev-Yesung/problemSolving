@@ -1,6 +1,8 @@
 import java.util.*;
 
-public class Programmers_kakao_67257 {
+// https://school.programmers.co.kr/learn/courses/30/lessons/67257
+// 수식 최대화
+public class ProgrammersKakao67257_1 {
 
 	public static void main(String[] args) {
 		recursion("", 0, 3);
@@ -9,7 +11,7 @@ public class Programmers_kakao_67257 {
 			System.out.println(Arrays.toString(arr));
 		}
 
-		long answer = new Programmers_kakao_67257()
+		long answer = new ProgrammersKakao67257_1()
 			.solution("100-200*300-500+20");
 
 		System.out.println(answer);
