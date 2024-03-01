@@ -2,7 +2,8 @@ import java.util.*;
 import java.util.stream.*;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/72411
-// 제출 내역
+// 메뉴 리뉴얼
+
 public class ProgrammersKakao72411_1 {
 
 	public static void main(String[] args) {
@@ -51,6 +52,7 @@ public class ProgrammersKakao72411_1 {
 		int occurrences = (int)orderList.stream()
 			.filter(order -> order.containsAll(selectedMenus))
 			.count();
+
 		// 만일 2번 이상 나오지 않았다면 더 이상 체크하지 않아도 되는 조합이므로 제외
 		if (occurrences < 2) {
 			return;
@@ -85,7 +87,7 @@ public class ProgrammersKakao72411_1 {
 		}
 	}
 
-	private static class Course {
+	static class Course {
 		public final String course;
 		public final int occurrences;
 
@@ -94,4 +96,5 @@ public class ProgrammersKakao72411_1 {
 			this.occurrences = occurrences;
 		}
 	}
+
 }
