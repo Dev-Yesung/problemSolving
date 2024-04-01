@@ -2,7 +2,7 @@ import java.util.*;
 
 // https://school.programmers.co.kr/learn/courses/30/lessons/87377
 // 처음 풀이
-public class Prgrms87377_1 {
+public class Programmers87377_1 {
 	public String[] solution(int[][] line) {
 		int rowSize = line.length;
 		// System.out.println(rowSize);
