@@ -11,7 +11,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/87377
     3. 저장된 위치를 기반으로 별을 배열에 찍는다.
 */
 
-public class Prgrms87377_2 {
+public class Programmers87377_2 {
 	public String[] solution(int[][] line) {
 		List<Point> points = findTransactionPoints(line);
 		Point maxPoint = findMaxPoint(points);
