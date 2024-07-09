@@ -4,3 +4,5 @@ plugins {
 rootProject.name = 'problem-solving'
 include 'java'
 include 'kotlin'
+include 'algorithmic-ps-book'
+
