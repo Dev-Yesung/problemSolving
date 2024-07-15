@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.*;
 
-public class Programmers43163_1 {
+public class Programmers43162_1 {
 	public int solution(int n, int[][] computers) {
 		int answer = 0;
 		boolean[] isVisited = new boolean[n];

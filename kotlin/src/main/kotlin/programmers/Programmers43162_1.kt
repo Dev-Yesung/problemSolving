@@ -1,6 +1,6 @@
 package programmers
 
-class Programmers43163_1 {
+class Programmers43162_1 {
     fun solution(n: Int, computers: Array<IntArray>): Int {
         var answer = 0
         val isVisited = Array(n) { false }
