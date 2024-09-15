@@ -27,7 +27,7 @@ public class Programmers42627 {
 			}
 
 			Job job = priorityQueue.poll();
-			totalTime += lastStartTime + job.duration - job.start;
+			totalTime += (lastStartTime - job.start) + job.duration;
 			lastStartTime += job.duration;
 		}
 
