@@ -1,3 +1,5 @@
+package programmers;
+
 import java.util.Arrays;
 
 // 정규표현식을 어느 정도 다룰줄 알아야 할 필요를 느낀다..!
@@ -5,7 +7,7 @@ import java.util.Arrays;
 public class Programmers49993_2 {
 
 	public static void main(String[] args) {
-		int answer = new Programmers49993_1()
+		int answer = new Programmers49993_2()
 			.solution("CBD", new String[] {"BACDE", "CBADF", "AECB", "BDA"});
 		System.out.println(answer);
 	}

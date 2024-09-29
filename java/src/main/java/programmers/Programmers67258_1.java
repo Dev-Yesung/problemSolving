@@ -5,6 +5,12 @@ import java.util.stream.Collectors;
 
 class Programmers67258_1 {
 
+	public static void main(String[] args) {
+		int[] solution = new Programmers67258_1()
+			.solution(new String[] {"DIA", "EMERALD", "SAPPHIRE", "DIA", "DIA", "RUBY", "EMERALD", "SAPPHIRE"});
+		System.out.println(Arrays.toString(solution));
+	}
+
 	public int[] solution(final String[] gems) {
 		final Set<String> gemType = Arrays.stream(gems)
 			.collect(Collectors.toSet());
