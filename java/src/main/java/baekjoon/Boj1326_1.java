@@ -3,7 +3,7 @@ package baekjoon;
 import java.io.*;
 import java.util.*;
 
-public class Boj1326 {
+public class Boj1326_1 {
 
 	private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
