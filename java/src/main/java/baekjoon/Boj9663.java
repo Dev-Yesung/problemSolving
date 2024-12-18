@@ -1,7 +1,6 @@
 package baekjoon;
 
 import java.io.*;
-import java.util.*;
 
 /**
     base condition 을 찾는거나 recursion 을 만드는 것 자체는 쉬웠으나
