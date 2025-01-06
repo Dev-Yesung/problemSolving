@@ -1,6 +1,5 @@
 package leet_code
 
-import java.util.*
 import kotlin.Comparator
 
 fun main() {
